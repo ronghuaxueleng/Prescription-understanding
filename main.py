@@ -15,7 +15,7 @@ from presc_parser import PrescParser
 def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     lines = "*门冬胰岛素 300u×1.000 Sig.5-5-5u 三餐前 qd"
-    lines=lines.lower()
+    lines = lines.lower()
     f_output = open(dir_path + r'\results\med_prescription_parser.json', 'w', errors='ignore',
                     encoding='utf-8')
     det = Detector()
@@ -31,6 +31,7 @@ def main():
         print(lines)
     finally:
         f_output.close()
+
 
 if __name__ == '__main__':
     sys.exit(main())
